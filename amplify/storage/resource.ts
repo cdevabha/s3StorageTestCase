@@ -17,11 +17,12 @@ export const storage = defineStorage({
 
 export const firstBucket = defineStorage({
   name: 'firstBucket',
-  isDefault: true, // identify your default storage bucket (required)
+//   isDefault: true, // identify your default storage bucket (required)
 });
 
 export const secondBucket = defineStorage({
   name: 'secondBucket',
+  isDefault: true, // identify your default storage bucket (required)
   access: (allow) => ({
     'private/{entity_id}/*': [
       allow.entity('identity').to(['read', 'write', 'delete'])
